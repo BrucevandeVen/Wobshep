@@ -1,0 +1,49 @@
+﻿@model IEnumerable<WobshepUI.Models.ShoppingCart.ShoppingCartViewModel>
+
+@{
+    ViewData["Title"] = "Shopping Cart";
+}
+
+<h1>Shopping Cart</h1>
+
+@if (Model?.Any() == true)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        €@Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Remove From Cart", "DeleteFromShoppingCart", new { id = item.ID })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h4>Total: €@Model.FirstOrDefault().TotalPrice</h4>
+    <form asp-controller="ShoppingCart" asp-action="CreateOrder" asp-route-Id="Model.Select(model => model.ID)">
+        <input type="submit" value="Order" class="btn btn-outline-success" />
+    </form>
+}
+else
+{
+    <hr />
+    <h3>Your added products will appear here!</h3>
+}

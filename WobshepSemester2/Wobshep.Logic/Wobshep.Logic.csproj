@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wobshep.Factory\Wobshep.Factory.csproj" />
+    <ProjectReference Include="..\Wobshep.Interfaces\Wobshep.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<WobshepUI.Models.Product.ProductViewModel>
+
+@{
+    ViewData["Title"] = "Wobshep";
+}
+
+<div class="row col-12">
+    @foreach (var item in Model)
+    {
+        <div class="card col-6">
+            <img src="@item.ImageURL" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">@item.Name</h5>
+                <p class="card-text">€@item.Price</p>
+                <dl>
+                    <dt>
+                        @Html.ActionLink("View Product", "GetProduct", new { id = item.ID })
+                    </dt>
+                </dl>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <form asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-Id="@item.ID">
+                        <input type="submit" value="Add To Cart" class="btn btn-outline-success" />
+                    </form>
+                }
+            </div>
+        </div>
+    }
+</div>

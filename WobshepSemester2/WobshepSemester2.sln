@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wobshep.DAL", "Wobshep.DAL\Wobshep.DAL.csproj", "{BACF7BD6-F53A-4173-852A-8E917747D294}"
+	ProjectSection(ProjectDependencies) = postProject
+		{09881867-D00B-4A56-924B-F655149C8C63} = {09881867-D00B-4A56-924B-F655149C8C63}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wobshep.Factory", "Wobshep.Factory\Wobshep.Factory.csproj", "{80C20490-9957-4BD9-8D49-109E6C611AAD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BACF7BD6-F53A-4173-852A-8E917747D294} = {BACF7BD6-F53A-4173-852A-8E917747D294}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wobshep.Logic", "Wobshep.Logic\Wobshep.Logic.csproj", "{786BE9FA-5163-4692-BC85-F43E81916AEC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{09881867-D00B-4A56-924B-F655149C8C63} = {09881867-D00B-4A56-924B-F655149C8C63}
+		{80C20490-9957-4BD9-8D49-109E6C611AAD} = {80C20490-9957-4BD9-8D49-109E6C611AAD}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wobshep.Interfaces", "Wobshep.Interfaces\Wobshep.Interfaces.csproj", "{09881867-D00B-4A56-924B-F655149C8C63}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WobshepUI", "WobshepUI\WobshepUI.csproj", "{D05056E8-3E9E-4323-80F5-D15022C84916}"
+	ProjectSection(ProjectDependencies) = postProject
+		{786BE9FA-5163-4692-BC85-F43E81916AEC} = {786BE9FA-5163-4692-BC85-F43E81916AEC}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BACF7BD6-F53A-4173-852A-8E917747D294}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BACF7BD6-F53A-4173-852A-8E917747D294}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BACF7BD6-F53A-4173-852A-8E917747D294}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BACF7BD6-F53A-4173-852A-8E917747D294}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80C20490-9957-4BD9-8D49-109E6C611AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80C20490-9957-4BD9-8D49-109E6C611AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80C20490-9957-4BD9-8D49-109E6C611AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80C20490-9957-4BD9-8D49-109E6C611AAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{786BE9FA-5163-4692-BC85-F43E81916AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{786BE9FA-5163-4692-BC85-F43E81916AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{786BE9FA-5163-4692-BC85-F43E81916AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{786BE9FA-5163-4692-BC85-F43E81916AEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09881867-D00B-4A56-924B-F655149C8C63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09881867-D00B-4A56-924B-F655149C8C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09881867-D00B-4A56-924B-F655149C8C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09881867-D00B-4A56-924B-F655149C8C63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D05056E8-3E9E-4323-80F5-D15022C84916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D05056E8-3E9E-4323-80F5-D15022C84916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D05056E8-3E9E-4323-80F5-D15022C84916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D05056E8-3E9E-4323-80F5-D15022C84916}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BBF28C33-B8B9-43B5-8BCF-CEF6C0F9AFCB}
+	EndGlobalSection
+EndGlobal
